@@ -24,3 +24,8 @@ Issues = "https://github.com/Iamrodos/ulid-dates/issues"
 
 [tool.pytest.ini_options]
 pythonpath = "src"
+
+[dependency-groups]
+test = [
+    "hypothesis>=6.138.3",
+]
