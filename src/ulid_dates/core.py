@@ -20,15 +20,15 @@ def ulid_prefix_range_for_dates(start: datetime, end: datetime) -> tuple[str, st
         (start_prefix, end_prefix).
 
     Example:
-        ```py
-        from datetime import datetime, timedelta
-        from ulid_dates import ulid_prefix_range_for_dates
+    ```py
+    from datetime import datetime, timedelta
+    from ulid_dates import ulid_prefix_range_for_dates
 
-        start_of_day = datetime(2023, 1, 1)
-        end_of_day = start_of_day + timedelta(days=1)
+    start_of_day = datetime(2023, 1, 1)
+    end_of_day = start_of_day + timedelta(days=1)
 
-        start, end = ulid_prefix_range_for_dates(start_of_day, end_of_day)
-        ```
+    start, end = ulid_prefix_range_for_dates(start_of_day, end_of_day)
+    ```
     """
     encoder = ULID()
 

@@ -4,6 +4,12 @@ A Python utility to determine ULID prefixes for date ranges.
 
 This can be useful for querying databases or logs for ULIDs that fall within a specific time period.
 
+For example by finding the prefixes for the start and end of a time range, you can efficiently scan for records within that range.
+
+If `id` is a ULID, you can then fine items between two time prefixes `... WHERE id >= 'start_prefix' AND id < 'end_prefix'`.
+
+
+
 ## Installation
 
 Install the package using `pip`:
